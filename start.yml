@@ -3,6 +3,7 @@
   tasks:
     - debug:
         msg: hello world zzzzz
-    - name: vim install
-        apt: name=vim state=present
+    - name: Install vim
+      command: sudo apt-get install vim
+
 
