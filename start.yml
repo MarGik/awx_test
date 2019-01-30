@@ -3,5 +3,6 @@
   tasks:
     - debug:
         msg: hello world
-
+    - name: vim install
+        apt: name=vim state=present
 
