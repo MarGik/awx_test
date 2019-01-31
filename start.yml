@@ -4,6 +4,8 @@
     - debug:
         msg: hello world zzzzz
     - name: Install vim
-      command: sudo apt-get install vim
+      apt:
+        name: vim
+        state: present
 
 
