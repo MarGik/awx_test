@@ -1,53 +1,9 @@
 
 - hosts: all
   tasks:
-    - debug:
-        msg: hello world zzzzz
-    - name: Install apache2
-      apt:
-        name: apache2
-        state: present
-    - name: install MySQL
-      apt:
-        name: mysql-server
-        state: present
-    - name: Install PHP
-      apt:
-        name: php-pear
-        state: present
-      apt: 
-        name: php-dev
-        state: present
-      apt: 
-        name: php-fpm
-        state: present
-      apt: 
-        name: php-zip
-        state: present
-      apt: 
-        name: php-curl
-        state: present
-      apt: 
-        name: php-xmlrpc
-        state: present
-      apt: 
-        name: php-gd
-        state: present
-      apt: 
-        name: php-mysql
-        state: present
-      apt: 
-        name: php-mbstring
-        state: present
-      apt: 
-        name: php-xml
-        state: present
-      apt: 
-        name: libapache2-mod-php
-        state: present
-    - name: restarting apache2
-      service:
-        name: apache2
-        state: restarted
+  - name: "create file"
+    file:
+      path: "/test.txt"
+      state: touch
      
       
